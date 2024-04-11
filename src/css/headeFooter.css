@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,430&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* Alinhamento da pagina toda */
+.page {
+  margin: 30px 50px;
+}
+/* Header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 0.7em 0.5em;
+  text-decoration: none;
+  transition: 0.3s;
+  border-bottom: 1px #f7f7f7 solid;
+  color: #242424;
+  text-decoration: none;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.1.2em;
+  color: #1f1534;
+}
+
+.header li a:hover,
+.header .btn-mobile:hover {
+    text-decoration: underline;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+}
+
+.header .nav {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .mobile-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .mobile-icon .hamburguer {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .mobile-icon .hamburguer:before,
+.header .mobile-icon .hamburguer:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .mobile-icon .hamburguer:before {
+  top: 5px;
+}
+
+.header .mobile-icon .hamburguer:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .mobile-btn {
+  display: none;
+}
+
+.header .mobile-btn:checked ~ .nav {
+  max-height: 240px;
+}
+
+.header .mobile-btn:checked ~ .mobile-icon .hamburguer {
+  background: transparent;
+}
+
+.header .mobile-btn:checked ~ .mobile-icon .hamburguer:before {
+  transform: rotate(-45deg);
+}
+
+.header .mobile-btn:checked ~ .mobile-icon .hamburguer:after {
+  transform: rotate(45deg);
+}
+
+.header .mobile-btn:checked ~ .mobile-icon:not(.steps) .hamburguer:before,
+.header .mobile-btn:checked ~ .mobile-icon:not(.steps) .hamburguer:after {
+  top: 0;
+}
+
+.container {
+  width: 100%;
+  float: left;
+  margin-top: 100px;
+}
+
+.content {
+  float: left;
+  width: 92%;
+  margin: 0 4%;
+}
+
+nav ul a {
+  text-decoration: none;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.1.2em;
+  color: #1f1534;
+}
+
+.foco {
+  font-weight: 800;
+}
+
+/* Header fim*/
+
+
+/* Footer inicio */
+
+footer {
+    text-align: center;
+  }
+  footer p {
+    font-size: clamp(12px, 4vw, 15px);
+    padding-top: 78px;
+    color: #000;
+    font-family: "Open Sans", sans-serif;
+  }
+  footer p a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+  }
+  footer p a:hover {
+    color: #5b3ffde7;
+  }
+  /* footer fim */
